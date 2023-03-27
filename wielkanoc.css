@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+
+body {
+    font-family: Alkatra; 
+    background-color: #C7DAC7;
+  }
+
+main {
+    display: flex;
+    align-items: center;
+    height: 500px;
+    justify-content: center;
+}
+
+h1 {
+    margin-top: 50px;
+    text-align: center;
+    color: #252525;
+}
+  
+.easter-card {
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: .5s;
+  }
+
+.card-front {
+    position: relative;
+    background-color: #FABF95;
+    width: 300px;
+    height:300px;
+    transform-origin: left;
+    transition: .5s;
+  }
+  
+.card-inside {
+    position: absolute;
+    background-color: #FABF95;
+    width: 300px;
+    height:300px;
+    z-index:-2;
+    left:0;
+    top:0;
+    box-shadow: inset 30px 10px 100px rgba(0, 0, 0, 0.05), 0 0 50px rgba(0,0,0,.05);
+  }
+
+.easter-card:hover {
+	transform: perspective(2000px) ;
+}
+
+.easter-card:hover .card-front {
+  transform: rotateY(-160deg); 
+  box-shadow: 0 10px 100px rgba(0,0,0,.1);
+}
+
+.bottom {
+    position: absolute;
+    background-color: #FE6786;
+    width:300px;
+    height: 90px;
+    bottom:0;
+    z-index:7;
+  }
+  
+  .easter-card:hover .bottom {
+    display: none;
+  }
+  
+  .bottom:before {
+    content:"Wesołych świąt!";
+    position: absolute;
+    color: white;
+    font-size: 35px;
+    width:100%;
+    text-align: center;
+    top:22px;
+  }
+
+.easter-card:hover .container {
+  display: none;
+}
+
+.container {
+    position: absolute;
+  }
+
+.eggOne{
+    position: absolute;
+    background: repeating-linear-gradient(#FE8D7B, #FE8D7B 10px,
+  #EBD1B0 10px, #EBD1B0 20px);
+    display: inline-block;
+    width: 100px;
+    height: 142px;
+    box-shadow: inset -10px -10px rgba(0,0,0,0.1);
+    top: 35px;
+    left: 100px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    z-index: 5;
+ }
+
+.eggTwo{
+    position: absolute;
+    background: repeating-linear-gradient(-45deg, #A8D7CD, #A8D7CD 20px,
+  #4eadb4 20px, #4eadb4 40px);
+    display: inline-block;
+    width: 70px;
+    height: 90px;
+    box-shadow: inset -10px -10px rgba(0,0,0,0.1);
+    top: 90px;
+    left: 55px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    z-index: 5;
+    transform: rotate(-15deg);
+ }
+
+.eggThree{
+    position: absolute;
+    background: repeating-linear-gradient(-45deg, #A8D7CD, #A8D7CD 20px,
+  #4eadb4 20px, #4eadb4 40px);
+    display: inline-block;
+    width: 70px;
+    height: 90px;
+    box-shadow: inset -10px -10px rgba(0,0,0,0.1);
+    top: 90px;
+    left: 180px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    z-index: 5;
+    transform: rotate(15deg);
+ }
+
+.wishes {
+    font-size: 18px;
+    width:200px;
+    margin-left:50px;
+    margin-top:30px;
+    color: #252525;
+  }
